@@ -1,0 +1,50 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 382
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ComboBoxPermissions: TComboBox
+    Align = Top
+    Items.Strings = (
+      'android.permission.ACCESS_COARSE_LOCATION'
+      'android.permission.ACCESS_FINE_LOCATION'
+      'android.permission.CALL_PHONE'
+      'android.permission.CAMERA'
+      'android.permission.INTERNET'
+      'android.permission.READ_CALENDAR'
+      'android.permission.READ_EXTERNAL_STORAGE'
+      'android.permission.READ_PHONE_STATE'
+      'android.permission.WRITE_EXTERNAL_STORAGE')
+    ItemIndex = 0
+    Size.Width = 382.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object ButtonPermissions: TButton
+    Align = Top
+    Position.Y = 32.000000000000000000
+    Size.Width = 382.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Permissions'
+    OnClick = ButtonPermissionsClick
+  end
+  object MemoPermissions: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 382.000000000000000000
+    Size.Height = 404.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 374.000000000000000000
+    Viewport.Height = 396.000000000000000000
+  end
+end
