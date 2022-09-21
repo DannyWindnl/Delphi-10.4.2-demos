@@ -84,7 +84,11 @@ begin
   Result.CurrencyString := '' + Char($20A0 + CurrencyOrd);
   Result.Margins.SetControlBounds(7,7,7,7,True);
   Result.Align := TAlign.alClient;
+  {$IFDEF VER340}  {Delphi 10 introduced the TNumberBox}
   Result.CurrencyFormat := 2; {2 = '$ 1'}
+  {$ELSE} {Delphi 11 Alexandria and above}
+  Result.CurrencyFormat := TNumberBoxCurrencyFormat.nbcfPostfix; {displays '$ 1'}
+  {$ENDIF}
   Result.ReadOnly := True;
 end;
 
